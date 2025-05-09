@@ -1,0 +1,23 @@
+@use '../Helpers/' as *;
+
+#root {
+    display: flex;
+    flex-direction: column;
+    font-size: rem(20);
+    font-family: var(--font-family);
+    font-weight: 400;
+    text-transform: uppercase;
+    transition-duration: var(--transition-duration);
+    background-color: rgb(255, 255, 255);
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    max-width: calc(var(--container-width) + (2 * var(--container-padding)));
+    padding-inline: var(--container-padding);
+    margin-inline: auto;
+}

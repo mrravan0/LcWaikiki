@@ -1,0 +1,17 @@
+@use '../../../Scss-Sass/Helpers/' as *;
+
+.season {
+    &__inner {
+        width: 100%;
+
+        @include respond('min', $tablet) {
+            padding-inline: rem(12);
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(40);
+    }
+}

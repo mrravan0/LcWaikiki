@@ -1,0 +1,11 @@
+@use '../../../Scss-Sass/Helpers/' as *;
+
+.header {
+    display: flex;
+    flex-direction: column;
+
+    &__inner {
+        width: 100%;
+        padding-inline: rem(30);
+    }
+}

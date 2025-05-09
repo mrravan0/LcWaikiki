@@ -1,0 +1,31 @@
+@use '../Helpers/' as *;
+
+
+:root {
+    --color-light: #fff;
+    --color-dark: #000;
+    --color-grey: #333;
+    --color-blue: #0d6efd;
+    --color-red: #dc3545;
+    --transition-duration: .4s;
+    --font-family: 'Open Sans', sans-serif;
+    --container-width: #{rem(540)};
+    --container-padding: #{rem(12)};
+
+    @media (min-width: rem(768)) {
+        --container-width: #{rem(720)};
+    }
+
+    @media (min-width: rem(992)) {
+        --container-width: #{rem(960)};
+    }
+
+    @media (min-width: rem(1200)) {
+        --container-width: #{rem(1140)};
+    }
+
+    @media (min-width: rem(1440)) {
+        --container-width: #{rem(1320)};
+    }
+
+}

@@ -1,0 +1,175 @@
+@use '../../../../Scss-Sass/Helpers/' as *;
+
+.header {
+    &__overlay {
+        display: contents;
+
+        @include respond('max', $tablet) {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            row-gap: 3rem;
+            width: 100%;
+            z-index: 100;
+            position: fixed;
+            inset: 0;
+            padding: rem(60) 1rem 0;
+            background-color: var(--color-light);
+            transition-duration: var(--transition-duration) !important;
+
+            &:not(.is-active) {
+                display: none;
+            }
+        }
+
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(40);
+        }
+        
+        &-content {
+            position: relative;
+            padding-inline: rem(15);
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: #f3f3f3;
+                left: 0;
+                bottom: rem(-20);
+            }
+        }
+
+        &-title{
+            font-size: rem(16);
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: rem(50);
+        width: 100%;
+
+        @include respond('max', $tablet) {
+            flex-direction: column;
+            row-gap: rem(10);
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: rem(5);
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: rem(-10);
+            left: 0;
+            width: 0;
+            height: rem(2);
+            background-color: #193db0;
+        }
+
+        @include hover {
+            &::after {
+                width: 100%;
+                transition-duration: var(--transition-duration);
+            }
+        }
+
+        @include respond('max', $tablet) {
+            width: 100%;
+        }
+
+        &-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 1rem;
+            width: 100%;
+            height: rem(80);
+            border-radius: rem(5);
+            padding-inline: rem(15);
+            font-weight: 700;
+            background-color: #f5f5f5;
+
+            @include respond('min', $tablet) {
+                display: none;
+            }
+        }
+    }
+
+    &__burger {
+        @include respond('min', $tablet) {
+            display: none;
+        }
+
+        @include respond('max', $tablet) {
+            @include square(rem(40));
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: rem(8.5) rem(4.5);
+            color: var(--color-dark);
+            background-color: transparent;
+            border: none;
+
+            @include hover {
+                color: var(--color-dark);
+            }
+        }
+
+        &-line {
+            width: 100%;
+            height: rem(2);
+            background-color: currentColor;
+            border-radius: rem(10);
+            transition-duration: var(--transition-duration) !important;
+        }
+
+        &-overlay {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 1rem;
+            width: 100%;
+            padding-inline: rem(20);
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .04);
+            position: absolute;
+            left: 0;
+            z-index: 200;
+        }
+
+        &-inner {
+            display: flex;
+            align-items: center;
+            column-gap: rem(10);
+        }
+    }
+
+    .is-active {
+        .header__burger-line {
+            &:first-child {
+                rotate: 45deg;
+                transform-origin: 0;
+                translate: 0.25rem -0.1em;
+            }
+
+            &:nth-child(2) {
+                rotate: -45deg;
+            }
+
+            &:last-child {
+                width: 0;
+            }
+        }
+    }
+}
