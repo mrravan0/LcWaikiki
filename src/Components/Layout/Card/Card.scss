@@ -1,0 +1,57 @@
+@use '../../../Scss-Sass/Helpers/' as *;
+
+.card {
+    border-radius: rem(5);
+
+    &__image {
+        width: 100%;
+        position: relative;
+    }
+
+    &__wrapper,
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__content {
+        padding: rem(15);
+        row-gap: rem(10);
+        color: #555;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(18);
+    }
+
+    &__price {
+        color: #193db0;
+        font-weight: 700;
+    }
+
+    &__overlay,
+    &__liked {
+        position: absolute;
+    }
+
+    &__liked {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: rem(10);
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
+    }
+
+    &__overlay {
+        visibility: hidden;
+        bottom: 0;
+
+        @include hover {
+            visibility: visible;
+            bottom: rem(10);
+            transition-duration: var(--transition-duration);
+        }
+    }
+
+}

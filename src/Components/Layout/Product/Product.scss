@@ -1,0 +1,142 @@
+@use '../../../Scss-Sass/Helpers/' as *;
+
+.product {
+
+    &__wrapper,
+    &__top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__info,
+    &__description {
+        font-weight: 500;
+    }
+
+    &__wrapper {
+        row-gap: rem(10);
+    }
+
+    &__top {
+        row-gap: rem(15);
+        padding-inline: rem(20);
+        margin-bottom: rem(20);
+
+        @include respond('max', $tablet) {
+            padding-inline: rem(12);
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: rem(25);
+    }
+
+    &__info {
+        font-size: rem(18);
+    }
+
+    &__description {
+        font-size: rem(16);
+        color: #878787;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: rem(20);
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        column-gap: rem(10);
+        padding: rem(5) rem(10);
+        border: rem(1) solid #b6b6b6;
+        border-radius: rem(20);
+
+        &-title {
+            font-size: rem(16);
+            font-weight: 500;
+        }
+
+        &-image {
+            width: rem(20);
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        column-gap: rem(20);
+        padding-inline: rem(20);
+
+        @include respond('max', $tablet) {
+            padding-inline: rem(12);
+        }
+
+        &-group {
+            display: flex;
+            align-items: flex-start;
+            column-gap: rem(10);
+            white-space: nowrap;
+            width: max-content;
+            position: absolute;
+            right: rem(20);
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        &-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 1rem;
+        }
+
+        &-details {
+            display: flex;
+            flex-direction: column;
+            max-width: rem(170);
+            width: 100%;
+            border: rem(1) solid var(--color-grey);
+            border-radius: rem(5);
+            padding: rem(5) rem(15);
+        }
+
+        &-summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        column-gap: rem(20);
+        margin-top: rem(5);
+
+        &-content {
+            display: flex;
+            align-items: center;
+            column-gap: rem(5);
+            position: relative;
+
+            &:first-child {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: #878787;
+                    width: rem(2);
+                    height: 100%;
+                    top: 0;
+                    right: rem(-12);
+                }
+            }
+        }
+
+        &-item {
+            width: rem(10);
+            height: rem(20);
+        }
+    }
+}

@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import FooterBottomDesktop from './FooterBottomDesktop/FooterBottomDesktop';
 import FooterBottomMobile from './FooterBottomMobile/FooterBottomMobile';
 import UseMediaQuery from '../../../CustomHooks/UseMediaQuery';
@@ -6,7 +7,7 @@ import photo2 from '../../../Assets/Images/Footer/photo2.png';
 import photo4 from '../../../Assets/Images/Footer/photo4.png';
 import photo5 from '../../../Assets/Images/Footer/photo5.png';
 import './Footer.scss';
-const Footer = () => {
+const Footer = memo(() => {
     const isMainFooter = UseMediaQuery('(max-width: 1000px)');
     const footerData = [
         {
@@ -48,6 +49,6 @@ const Footer = () => {
             </div>
         </section>
     )
-}
+})
 
 export default Footer;

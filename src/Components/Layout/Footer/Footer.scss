@@ -36,14 +36,16 @@
             width: 100%;
 
             &:first-child {
-                &::after {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    height: rem(1);
-                    top: rem(-25);
-                    left: 0;
-                    background-color: #e4e3e3;
+                @include respond('max', $tablet) {
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: rem(1);
+                        top: rem(-25);
+                        left: 0;
+                        background-color: #e4e3e3;
+                    }
                 }
             }
 
