@@ -17,32 +17,32 @@ const HeaderBottom = () => {
         {
             name: 'Женщины',
             photo: photo1,
-            to: ''
+            to: '/women'
         },
         {
             name: 'Мужчины',
             photo: photo2,
-            to: ''
+            to: '/men'
         },
         {
             name: 'Дети',
             photo: photo3,
-            to: ''
+            to: '/children'
         },
         {
             name: 'Малыши',
             photo: photo4,
-            to: ''
+            to: '/baby'
         },
         {
             name: 'LCW Home',
             photo: photo5,
-            to: ''
+            to: '/lcwHome'
         },
         {
             name: 'Sale %',
             photo: photo6,
-            to: ''
+            to: '/sale'
         }
     ]
     return (
@@ -53,14 +53,24 @@ const HeaderBottom = () => {
                         <div className="header__bottom-group">
                             <div className="header__content">
                                 <HeaderNavigation data={arrayInfo} />
-                                <LogoIcon
-                                    color={'#193db0'}
-                                    width={'230'}
-                                    className={'header__content-logo'} />
+                                <Link to={'/'}>
+                                    <LogoIcon
+                                        color={'#193db0'}
+                                        width={'230'}
+                                        className={'header__content-logo'} />
+                                </Link>
                             </div>
                             <div className="header__baskets">
                                 <Link><ProfileIcon /></Link>
-                                <Link><HartIcon /></Link>
+                                <Link>
+                                    <HartIcon
+                                        features={
+                                            {
+                                                color: '#fff',
+                                                stroke: 'rgb(25, 61, 176)'
+                                            }
+                                        } />
+                                </Link>
                                 <Link><CartIcon /></Link>
                             </div>
                         </div>
@@ -82,9 +92,9 @@ const HeaderBottom = () => {
                                         <li className="header__item" key={index}>
                                             {
                                                 index !== array.length - 1 ?
-                                                    <Link className='header__link'>{item.name}</Link>
+                                                    <Link className='header__link' to={item.to}>{item.name}</Link>
                                                     :
-                                                    <Link style={{ color: 'red' }}>{item.name}</Link>
+                                                    <Link style={{ color: 'red' }} to={item.to}>{item.name}</Link>
                                             }
                                         </li>
                                     ))

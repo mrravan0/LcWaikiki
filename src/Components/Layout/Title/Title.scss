@@ -5,6 +5,10 @@
     font-size: rem(18);
     background-color: #f8f8f8;
 
+    @include respond('max', $mobile-s ) {
+        font-size: rem(12);
+    }
+
     &__inner {
         display: flex;
         align-items: center;

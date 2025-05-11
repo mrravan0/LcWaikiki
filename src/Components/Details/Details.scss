@@ -1,0 +1,70 @@
+@use '../../Scss-Sass/Helpers/' as *;
+
+.details {
+    padding-top: rem(20);
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__group {
+        display: flex;
+        justify-content: space-between;
+        column-gap: rem(50);
+        padding-block: rem(15);
+    }
+
+    &__left {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(20);
+        width: 65%;
+
+        &-image {
+            width: 100%;
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(15);
+        width: 35%;
+    }
+
+    &__middle {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(10);
+        padding: rem(20) rem(10) rem(10);
+        box-shadow: 0 rem(80) rem(80) rem(20) rgba(198, 206, 215, .3);
+        background-color: var(--color-light);
+
+        &-title {
+            color: var(--color-grey);
+            font-weight: 600;
+            font-size: rem(17);
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: max-content;
+            cursor: pointer;
+        }
+
+        &-image {
+            max-width: rem(50);
+            width: 100%;
+            border: rem(1) solid #193db0;
+        }
+
+        &-subtitle {
+            font-size: rem(13);
+            font-weight: 600;
+            color: #193db0;
+        }
+    }
+}

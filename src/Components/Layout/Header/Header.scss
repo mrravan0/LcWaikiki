@@ -3,6 +3,7 @@
 .header {
     display: flex;
     flex-direction: column;
+    box-shadow: 0 rem(3) rem(6) 0 rgba(0, 0, 0, .06);
 
     &__inner {
         width: 100%;

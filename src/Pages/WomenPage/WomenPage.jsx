@@ -33,6 +33,78 @@ const WomenPage = () => {
             description: 'Женщина  Голубой Рубашка-туника',
             price: '2 399,00 RUB'
         },
+        {
+            photo: photo1,
+            title: 'XSIDE',
+            description: 'Женская футболка с коротким рукавом, V-образным вырезом и принтом',
+            price: '799,00 RUB'
+        },
+        {
+            photo: photo2,
+            title: 'XSIDE',
+            description: 'Женская футболка с круглым вырезом и короткими рукавами с принтом',
+            price: '899,00 RUB'
+        },
+        {
+            photo: photo3,
+            title: 'LCWAIKIKI Classic',
+            description: 'Женщина  Синий Платье',
+            price: '2 599,00 RUB'
+        },
+        {
+            photo: photo4,
+            title: 'LCWAIKIKI Classic',
+            description: 'Женщина  Голубой Рубашка-туника',
+            price: '2 399,00 RUB'
+        },
+        {
+            photo: photo1,
+            title: 'XSIDE',
+            description: 'Женская футболка с коротким рукавом, V-образным вырезом и принтом',
+            price: '799,00 RUB'
+        },
+        {
+            photo: photo2,
+            title: 'XSIDE',
+            description: 'Женская футболка с круглым вырезом и короткими рукавами с принтом',
+            price: '899,00 RUB'
+        },
+        {
+            photo: photo3,
+            title: 'LCWAIKIKI Classic',
+            description: 'Женщина  Синий Платье',
+            price: '2 599,00 RUB'
+        },
+        {
+            photo: photo4,
+            title: 'LCWAIKIKI Classic',
+            description: 'Женщина  Голубой Рубашка-туника',
+            price: '2 399,00 RUB'
+        },
+        {
+            photo: photo1,
+            title: 'XSIDE',
+            description: 'Женская футболка с коротким рукавом, V-образным вырезом и принтом',
+            price: '799,00 RUB'
+        },
+        {
+            photo: photo2,
+            title: 'XSIDE',
+            description: 'Женская футболка с круглым вырезом и короткими рукавами с принтом',
+            price: '899,00 RUB'
+        },
+        {
+            photo: photo3,
+            title: 'LCWAIKIKI Classic',
+            description: 'Женщина  Синий Платье',
+            price: '2 599,00 RUB'
+        },
+        {
+            photo: photo4,
+            title: 'LCWAIKIKI Classic',
+            description: 'Женщина  Голубой Рубашка-туника',
+            price: '2 399,00 RUB'
+        },
     ]
     return (
         <Product

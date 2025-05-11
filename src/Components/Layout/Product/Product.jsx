@@ -1,8 +1,12 @@
+import { memo, useState } from 'react';
 import Title from '../Title/Title';
 import Filter from '../Filter/Filter';
 import Card from '../Card/Card';
 import Arrow from '../../../Assets/Svg/Arrow';
-import { useState } from 'react';
+import Send from '../../../Assets/Svg/Send';
+import Sort from '../../../Assets/Svg/Sort';
+import MobileList from '../../../Assets/Svg/MobileList';
+import photoFilter from '../../../Assets/Images/Filter/photo1.png';
 import photo1 from '../../../Assets/Images/Product/photo1.png';
 import photo2 from '../../../Assets/Images/Product/photo2.png';
 import photo3 from '../../../Assets/Images/Product/photo3.png';
@@ -10,7 +14,7 @@ import photo4 from '../../../Assets/Images/Product/photo4.png';
 import photo5 from '../../../Assets/Images/Product/photo5.png';
 import photo6 from '../../../Assets/Images/Product/photo6.png';
 import './Product.scss';
-const Product = ({ data, cardData }) => {
+const Product = memo(({ data, cardData }) => {
     const [isOpen, setIsOpen] = useState();
     const productData = [
         {
@@ -39,6 +43,22 @@ const Product = ({ data, cardData }) => {
         },
 
     ]
+    const filterData = [
+        {
+            image: <Send />
+        },
+        {
+            image: <img src={photoFilter} alt="" />,
+            description: ' Фильтр'
+        },
+        {
+            image: <Sort />,
+            description: 'Новинки'
+        },
+        {
+            image: <MobileList />,
+        }
+    ]
     return (
         <section className='product'>
             <div className="product__wrapper">
@@ -47,7 +67,17 @@ const Product = ({ data, cardData }) => {
                     <h1 className="product__title">{data?.subtitle}</h1>
                     <p className="product__info">{data?.info}</p>
                     <p className="product__description">{data.description}</p>
-                    <p className="product__filter" style={{ color: '#555' }}>Быстрый фильтр</p>
+                    <p className="product__top-filter" style={{ color: '#555' }}>Быстрый фильтр</p>
+                    <div className="product__filter">
+                        {
+                            filterData?.map((item, index) => (
+                                <div className="product__filter-box" key={index} style={item.description ? { width: '100%' } : { width: '20%' }}>
+                                    {item.image}
+                                    <p className="product__filter-title">{item?.description}</p>
+                                </div>
+                            ))
+                        }
+                    </div>
                     <ul className="product__list">
                         {
                             productData?.map((item, index) => (
@@ -99,6 +129,6 @@ const Product = ({ data, cardData }) => {
             </div>
         </section >
     )
-}
+})
 
 export default Product;

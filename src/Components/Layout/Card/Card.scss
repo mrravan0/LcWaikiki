@@ -2,10 +2,19 @@
 
 .card {
     border-radius: rem(5);
+    position: relative;
+    cursor: pointer;
+
+    @include hover {
+        .card__overlay {
+            visibility: visible;
+            bottom: rem(170);
+            transition-duration: var(--transition-duration);
+        }
+    }
 
     &__image {
         width: 100%;
-        position: relative;
     }
 
     &__wrapper,
@@ -36,22 +45,28 @@
     }
 
     &__liked {
+        @include square(rem(40));
         display: flex;
         justify-content: center;
-        align-items: center;
         top: rem(10);
-        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, .16);
+        right: rem(10);
+        box-shadow: 0 rem(3) rem(6) 0 rgba(0, 0, 0, .16);
+        border-radius: rem(5);
+        background-color: var(--color-light);
+        cursor: pointer;
     }
 
     &__overlay {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: rem(15);
         visibility: hidden;
         bottom: 0;
-
-        @include hover {
-            visibility: visible;
-            bottom: rem(10);
-            transition-duration: var(--transition-duration);
-        }
+        width: 100%;
+        text-align: center;
+        background-color: var(--color-light);
+        padding-block: rem(5);
+        color: var(--color-grey);
     }
-
 }
