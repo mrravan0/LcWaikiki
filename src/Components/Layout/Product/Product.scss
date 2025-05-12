@@ -62,7 +62,7 @@
         border: rem(1) solid #b6b6b6;
         border-radius: rem(20);
 
-        @include respond('max',$tablet){
+        @include respond('max', $tablet) {
             padding-right: rem(25);
         }
 
@@ -77,16 +77,16 @@
     }
 
     &__filter {
-        @include respond('min', $tablet) {
-            display: none;
-        }
-
         border: rem(1) solid #ddd;
         display: flex;
         align-items: center;
         justify-content: space-between;
         column-gap: 1rem;
         padding-inline: rem(10);
+
+        @include respond('min', $tablet) {
+            display: none;
+        }
 
         &-box {
             display: flex;

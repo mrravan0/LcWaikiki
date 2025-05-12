@@ -2,7 +2,7 @@ import { memo } from 'react';
 import photo1 from '../../../Assets/Images/Filter/photo1.png';
 import ArrowIcon from '../../../Assets/Svg/Arrow';
 import './Filter.scss';
-const Filter = memo(({ click }) => {
+const Filter = memo(({ onToggle }) => {
     const filterData = [
         'Размер', 'Тип товара', 'Цвет',
         'Цена', 'Бренд', 'Лицензия',
@@ -13,7 +13,7 @@ const Filter = memo(({ click }) => {
         'Бренд', 'Лицензия',
     ]
     return (
-        <details className="filter" onToggle={click}>
+        <details className='filter' onToggle={(e) => onToggle(e.currentTarget.open)}>
             <summary className='filter__summary'>
                 <div className="filter__summary-content">
                     <img src={photo1} alt="" />

@@ -14,10 +14,11 @@ const DetailsTop = ({ data }) => {
                         </span>
                     </p>
                     <p className="details__top-description">{data.description}</p>
+                    <p className="details__cash-price" style={{ textAlign: 'right' }}>{data.price}</p>
                 </div>
                 <div className="details__top-group">
                     <div className="details__top-box">
-                        <HartIcon features={{stroke: 'black'}}/>
+                        <HartIcon features={{ stroke: 'black' }} />
                     </div>
                     <div className="details__top-box">
                         <img src={photo1} alt="" />

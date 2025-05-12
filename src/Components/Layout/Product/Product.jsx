@@ -15,7 +15,7 @@ import photo5 from '../../../Assets/Images/Product/photo5.png';
 import photo6 from '../../../Assets/Images/Product/photo6.png';
 import './Product.scss';
 const Product = memo(({ data, cardData }) => {
-    const [isOpen, setIsOpen] = useState();
+    const [isOpen, setIsOpen] = useState(false);
     const productData = [
         {
             photo: photo1,
@@ -58,7 +58,7 @@ const Product = memo(({ data, cardData }) => {
         {
             image: <MobileList />,
         }
-    ]
+    ];
     return (
         <section className='product'>
             <div className="product__wrapper">
@@ -90,7 +90,7 @@ const Product = memo(({ data, cardData }) => {
                     </ul>
                 </div>
                 <div className="product__bottom" style={isOpen ? { flexDirection: 'row' } : { flexDirection: 'column' }}>
-                    <Filter click={(event) => setIsOpen(event.target.open)} />
+                    <Filter onToggle={(open) => setIsOpen(open)} />
                     <div className="product__bottom-group">
                         <p className="product__bottom-title">Вы смотрели</p>
                         <div className='product__box'>
@@ -118,7 +118,7 @@ const Product = memo(({ data, cardData }) => {
                             <p>Hello World</p>
                         </details>
                     </div>
-                    <div className="product__bottom-cards" style={isOpen ? { marginTop: '55px' } : { marginTop: '10px' }}>
+                    <div className="product__bottom-cards" style={isOpen ? { marginTop: '55px' } : { marginTop: '40px' }}>
                         {
                             cardData?.map((item, index) => (
                                 <Card data={item} key={index} />

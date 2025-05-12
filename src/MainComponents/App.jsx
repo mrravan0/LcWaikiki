@@ -9,7 +9,7 @@ import ChildrenPage from "../Pages/ChildrenPage/ChildrenPage";
 import BabyPage from "../Pages/BabyPage/BabyPage";
 import LcwHomePage from "../Pages/LcwHomePage/LcwHomePage";
 import SalePage from "../Pages/SalePage/SalePage";
-import Details from "../Components/Details/Details";
+import DetailsPage from "../Pages/DetailsPage/DetailsPage";
 function App() {
   return (
     <Fragment>
@@ -23,7 +23,7 @@ function App() {
           <Route path="/baby" element={<BabyPage />} />
           <Route path="/lcwHome" element={<LcwHomePage />} />
           <Route path="/sale" element={<SalePage />} />
-          <Route path="/details" element={<Details />} />
+          <Route path="/details" element={<DetailsPage />} />
         </Routes>
       </main>
       <Footer />

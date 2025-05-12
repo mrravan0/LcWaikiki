@@ -1,0 +1,35 @@
+@use '../../Scss-Sass/Helpers/' as *;
+
+.cardSlider {
+    padding-block: rem(10) rem(40);
+
+    @include respond('max', $tablet) {
+        display: none;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(30);
+        padding-inline: rem(15);
+    }
+
+    &__group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: rem(10);
+    }
+
+    &__title {
+        color: rgb(31, 73, 182);
+        font-weight: 600;
+        font-size: rem(25);
+    }
+
+    .card {
+        @include hover {
+            box-shadow: rgba(100, 100, 111, 0.2) 0 rem(7) rem(30) 0;
+        }
+    }
+}

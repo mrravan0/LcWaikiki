@@ -14,13 +14,13 @@ const HeaderNavigation = ({ data }) => {
                             data?.map((item, index, array) => (
                                 index !== array.length - 1 ?
                                     <li className="header__item" key={index}>
-                                        <div className="header__item-group">
-                                            <Link >{item.name}</Link>
+                                        <Link className="header__item-group" to={item.to} onClick={() => setIsOpen(false)}>
+                                            <p>{item.name}</p>
                                             <img src={item.photo} alt="" />
-                                        </div>
+                                        </Link>
                                     </li>
-                                    : <li className="header__item" key={index}>
-                                        <div className="header__item-group"
+                                    : <li className="header__item" key={index} to={item.to}>
+                                        <Link className="header__item-group"
                                             style={
                                                 {
                                                     backgroundImage: `url(${item.photo})`,
@@ -28,9 +28,11 @@ const HeaderNavigation = ({ data }) => {
                                                     backgroundPosition: 'center',
                                                     backgroundSize: 'cover'
                                                 }
-                                            }>
-                                            <Link style={{ color: '#fff' }}>{item.name}</Link>
-                                        </div>
+                                            }
+                                            onClick={() => setIsOpen(false)}
+                                        >
+                                            <p style={{ color: '#fff' }}>{item.name}</p>
+                                        </Link>
                                     </li>
                             ))
                         }
