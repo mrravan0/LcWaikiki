@@ -10,6 +10,8 @@ import BabyPage from "../Pages/BabyPage/BabyPage";
 import LcwHomePage from "../Pages/LcwHomePage/LcwHomePage";
 import SalePage from "../Pages/SalePage/SalePage";
 import DetailsPage from "../Pages/DetailsPage/DetailsPage";
+import LoginPage from "../Pages/LoginPage/LoginPage";
+import RegisterPage from "../Pages/RegisterPage/RegisterPage";
 function App() {
   return (
     <Fragment>
@@ -24,6 +26,8 @@ function App() {
           <Route path="/lcwHome" element={<LcwHomePage />} />
           <Route path="/sale" element={<SalePage />} />
           <Route path="/details" element={<DetailsPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
         </Routes>
       </main>
       <Footer />

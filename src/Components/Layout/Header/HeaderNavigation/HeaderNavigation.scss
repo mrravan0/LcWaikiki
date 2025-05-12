@@ -27,7 +27,7 @@
             flex-direction: column;
             row-gap: rem(40);
         }
-        
+
         &-content {
             position: relative;
             padding-inline: rem(15);
@@ -43,7 +43,7 @@
             }
         }
 
-        &-title{
+        &-title {
             font-size: rem(16);
         }
     }
@@ -146,6 +146,10 @@
             position: fixed;
             left: 0;
             z-index: 200;
+
+            @include respond('min', $tablet) {
+                display: none;
+            }
         }
 
         &-inner {

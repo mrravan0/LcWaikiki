@@ -61,7 +61,7 @@ const HeaderBottom = () => {
                                 </Link>
                             </div>
                             <div className="header__baskets">
-                                <Link><ProfileIcon /></Link>
+                                <Link to={'/login'}><ProfileIcon /></Link>
                                 <Link>
                                     <HartIcon
                                         features={
