@@ -8,37 +8,43 @@ const DetailsPage = () => {
             photo: photo1,
             title: 'Брюки - для мужчин',
             description: 'Мужской Бежевый Брюки карго',
-            price: '2,599 RUB'
+            price: '2,599 RUB',
+            status: true
         },
         {
             photo: photo1,
             title: 'Брюки - для мужчин',
             description: 'Мужской Бежевый Брюки карго',
-            price: '2,599 RUB'
+            price: '2,599 RUB',
+            status: true
         },
         {
             photo: photo1,
             title: 'Брюки - для мужчин',
             description: 'Мужской Бежевый Брюки карго',
-            price: '2,599 RUB'
+            price: '2,599 RUB',
+            status: true
         },
         {
             photo: photo1,
             title: 'Брюки - для мужчин',
             description: 'Мужской Бежевый Брюки карго',
-            price: '2,599 RUB'
+            price: '2,599 RUB',
+            status: true
         },
         {
             photo: photo1,
             title: 'Брюки - для мужчин',
             description: 'Мужской Бежевый Брюки карго',
-            price: '2,599 RUB'
-        }, 
+            price: '2,599 RUB',
+            status: true
+        },
         {
             photo: photo1,
             title: 'Брюки - для мужчин',
             description: 'Мужской Бежевый Брюки карго',
-            price: '2,599 RUB'
+            price: '2,599 RUB',
+            status: true
         }
     ]
     return (

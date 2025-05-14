@@ -13,73 +13,85 @@ const BabyPage = () => {
             photo: photo1,
             title: 'LCW baby',
             description: 'Мальчики Серо-желтый Рубашка',
-            price: '799,00 RUB'
+            price: '799,00 RUB',
+            status: true
         },
         {
             photo: photo2,
             title: 'LCW baby',
             description: 'Комплект из 2 маек для девочек с квадратным вырезом',
-            price: '499,00 RUB'
+            price: '499,00 RUB',
+            status: true
         },
         {
             photo: photo3,
             title: 'LCW baby',
             description: 'Девочки Розовый Юбка',
-            price: '899,00 RUB'
+            price: '899,00 RUB',
+            status: true
         },
         {
             photo: photo4,
             title: 'LCW baby',
             description: 'Девочки Голубой Платье',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         },
         {
             photo: photo1,
             title: 'LCW baby',
             description: 'Мальчики Серо-желтый Рубашка',
-            price: '799,00 RUB'
+            price: '799,00 RUB',
+            status: true
         },
         {
             photo: photo2,
             title: 'LCW baby',
             description: 'Комплект из 2 маек для девочек с квадратным вырезом',
-            price: '499,00 RUB'
+            price: '499,00 RUB',
+            status: true
         },
         {
             photo: photo3,
             title: 'LCW baby',
             description: 'Девочки Розовый Юбка',
-            price: '899,00 RUB'
+            price: '899,00 RUB',
+            status: true
         },
         {
             photo: photo4,
             title: 'LCW baby',
             description: 'Девочки Голубой Платье',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         },
         {
             photo: photo1,
             title: 'LCW baby',
             description: 'Мальчики Серо-желтый Рубашка',
-            price: '799,00 RUB'
+            price: '799,00 RUB',
+            status: true
         },
         {
             photo: photo2,
             title: 'LCW baby',
             description: 'Комплект из 2 маек для девочек с квадратным вырезом',
-            price: '499,00 RUB'
+            price: '499,00 RUB',
+            status: true
         },
         {
             photo: photo3,
             title: 'LCW baby',
             description: 'Девочки Розовый Юбка',
-            price: '899,00 RUB'
+            price: '899,00 RUB',
+            status: true
         },
         {
             photo: photo4,
             title: 'LCW baby',
             description: 'Девочки Голубой Платье',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         }
     ]
     return <Product data={babyData} cardData={cardData} />

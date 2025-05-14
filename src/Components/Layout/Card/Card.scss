@@ -48,6 +48,7 @@
         @include square(rem(40));
         display: flex;
         justify-content: center;
+        align-items: center;
         top: rem(10);
         right: rem(10);
         box-shadow: 0 rem(3) rem(6) 0 rgba(0, 0, 0, .16);
@@ -68,5 +69,44 @@
         background-color: var(--color-light);
         padding-block: rem(5);
         color: var(--color-grey);
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        column-gap: rem(5);
+        padding-inline: rem(10);
+
+        &-content,
+        &-button {
+            text-align: center;
+            border-radius: rem(5);
+            font-size: rem(18);
+
+            @include respond('max', $laptop) {
+                font-size: rem(14);
+            }
+        }
+
+        &-content {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            column-gap: rem(5);
+            border: rem(1) solid var(--color-grey);
+            padding: rem(5) rem(12);
+            width: 30%;
+
+            @include respond('max', $tablet) {
+                display: none;
+            }
+        }
+
+        &-button {
+            background-color: #193db0;
+            color: var(--color-light);
+            padding: rem(6) rem(12);
+            width: 100%;
+        }
     }
 }

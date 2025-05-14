@@ -40,13 +40,22 @@ const HeaderNavigation = ({ data }) => {
                 </nav>
                 <div className="header__overlay-wrapper">
                     <div className="header__overlay-content">
-                        <Link className="header__overlay-title">Войти / Создать личный кабинет</Link>
+                        <Link
+                            className="header__overlay-title"
+                            to={'/login'}
+                            onClick={() => setIsOpen(false)}>Войти / Создать личный кабинет</Link>
                     </div>
                     <div className="header__overlay-content">
-                        <Link className="header__overlay-title">Мои заказы</Link>
+                        <Link
+                            className="header__overlay-title"
+                            to={'/cart'}
+                            onClick={() => setIsOpen(false)}>Мои заказы</Link>
                     </div>
                     <div className="header__overlay-content">
-                        <Link className="header__overlay-title">Мой Список желаний</Link>
+                        <Link
+                            className="header__overlay-title"
+                            to={'/whishList'}
+                            onClick={() => setIsOpen(false)}>Мой Список желаний</Link>
                     </div>
                 </div>
             </div>

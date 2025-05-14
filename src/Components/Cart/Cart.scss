@@ -1,0 +1,112 @@
+@use '../../Scss-Sass/Helpers/' as *;
+
+.cart {
+    padding-block: rem(30) rem(10);
+
+    &__wrapper {
+        display: flex;
+        gap: rem(20);
+
+        @include respond('max', $tablet) {
+            flex-direction: column;
+        }
+    }
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(15);
+        width: 65%;
+
+        @include respond('max',$tablet){
+            width: 100%;
+        }
+
+        &-top {
+            color: var(--color-grey);
+            font-weight: 700;
+        }
+
+        &-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            column-gap: rem(5);
+            border-bottom: rem(1) solid #c6c6c6;
+            padding-block: rem(10);
+        }
+
+        &-content {
+            display: flex;
+            align-items: center;
+            column-gap: rem(10);
+        }
+
+        &-wrapper,
+        &-group,
+        &-right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-wrapper {
+            justify-content: space-between;
+            height: rem(135);
+        }
+
+        &-image {
+            max-width: rem(100);
+            width: 100%;
+        }
+
+        &-title,
+        &-size {
+            color: var(--color-grey);
+
+        }
+
+        &-subtitle {
+            color: #bfbfbf;
+        }
+
+        &-middle {
+            display: flex;
+            align-self: center;
+            column-gap: rem(10);
+            border: rem(1) solid #c8c8c8;
+            border-radius: rem(3);
+        }
+
+        &-button {
+            padding-inline: rem(5);
+            cursor: pointer;
+        }
+
+        &-right {
+            row-gap: rem(15);
+            align-items: flex-end;
+        }
+
+        &-price {
+            color: #193db0;
+            font-size: rem(25);
+            font-weight: 700;
+        }
+
+        &-info {
+            display: flex;
+            align-items: center;
+            column-gap: rem(5);
+        }
+
+        &-box {
+            @include square(rem(30));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: rem(1) solid #c8c8c8;
+            border-radius: rem(3);
+            cursor: pointer;
+        }
+    }
+}

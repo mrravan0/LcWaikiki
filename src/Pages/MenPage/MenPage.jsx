@@ -14,73 +14,85 @@ const MenPage = () => {
             photo: photo1,
             title: 'XSIDE',
             description: 'Джинсы мужские XSIDE',
-            price: '2 399,00 RUB'
+            price: '2 399,00 RUB',
+            status: true
         },
         {
             photo: photo2,
             title: 'LCW Jeans',
             description: 'Мужские брюки стандартного кроя',
-            price: '2 999,00 RUB'
+            price: '2 999,00 RUB',
+            status: true
         },
         {
             photo: photo3,
             title: 'SOUTHBLUE',
             description: 'Мужская рубашка классического кроя из поплина в полоску с короткими рукавами',
-            price: '1 799,00 RUB'
+            price: '1 799,00 RUB',
+            status: true
         },
         {
             photo: photo4,
             title: 'LCWAIKIKI Classic',
             description: 'Мужские брюки стандартного кроя',
-            price: '2 399,00 RUB'
+            price: '2 399,00 RUB',
+            status: true
         },
         {
             photo: photo1,
             title: 'XSIDE',
             description: 'Джинсы мужские XSIDE',
-            price: '2 399,00 RUB'
+            price: '2 399,00 RUB',
+            status: true
         },
         {
             photo: photo2,
             title: 'LCW Jeans',
             description: 'Мужские брюки стандартного кроя',
-            price: '2 999,00 RUB'
+            price: '2 999,00 RUB',
+            status: true
         },
         {
             photo: photo3,
             title: 'SOUTHBLUE',
             description: 'Мужская рубашка классического кроя из поплина в полоску с короткими рукавами',
-            price: '1 799,00 RUB'
+            price: '1 799,00 RUB',
+            status: true
         },
         {
             photo: photo4,
             title: 'LCWAIKIKI Classic',
             description: 'Мужские брюки стандартного кроя',
-            price: '2 399,00 RUB'
+            price: '2 399,00 RUB',
+            status: true
         },
         {
             photo: photo1,
             title: 'XSIDE',
             description: 'Джинсы мужские XSIDE',
-            price: '2 399,00 RUB'
+            price: '2 399,00 RUB',
+            status: true
         },
         {
             photo: photo2,
             title: 'LCW Jeans',
             description: 'Мужские брюки стандартного кроя',
-            price: '2 999,00 RUB'
+            price: '2 999,00 RUB',
+            status: true
         },
         {
             photo: photo3,
             title: 'SOUTHBLUE',
             description: 'Мужская рубашка классического кроя из поплина в полоску с короткими рукавами',
-            price: '1 799,00 RUB'
+            price: '1 799,00 RUB',
+            status: true
         },
         {
             photo: photo4,
             title: 'LCWAIKIKI Classic',
             description: 'Мужские брюки стандартного кроя',
-            price: '2 399,00 RUB'
+            price: '2 399,00 RUB',
+            status: true
         }
     ]
     return <Product data={menData} cardData={cardData} />

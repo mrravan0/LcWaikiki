@@ -18,7 +18,7 @@ const DetailsTop = ({ data }) => {
                 </div>
                 <div className="details__top-group">
                     <div className="details__top-box">
-                        <HartIcon features={{ stroke: 'black' }} />
+                        <HartIcon features={{ color: 'black' }} />
                     </div>
                     <div className="details__top-box">
                         <img src={photo1} alt="" />

@@ -64,6 +64,7 @@
             justify-content: center;
             box-shadow: 0 rem(3) rem(6) 0 rgba(0, 0, 0, .16);
             border-radius: rem(5);
+            background-color: var(--color-light);
             cursor: pointer;
 
             @include hover {

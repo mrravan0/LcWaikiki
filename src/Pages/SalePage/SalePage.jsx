@@ -13,73 +13,85 @@ const SalePage = () => {
             photo: photo1,
             title: 'SOUTHBLUE',
             description: 'Мужской Серый Рубашка',
-            price: '1 599,00 RUB'
+            price: '1 599,00 RUB',
+            status: true
         },
         {
             photo: photo2,
             title: 'XSIDE',
             description: 'Куртка мужская с воротником-стойкой',
-            price: '3 999,00 RUB'
+            price: '3 999,00 RUB',
+            status: true
         },
         {
             photo: photo3,
             title: 'SOUTHBLUE',
             description: 'Женское платье с круглым вырезом и короткими рукавами',
-            price: '1 399,00 RUB'
+            price: '1 399,00 RUB',
+            status: true
         },
         {
             photo: photo4,
             title: 'LCW DREAM',
             description: 'Женщина  Бежевый Носки до щиколотки',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         },
         {
             photo: photo1,
             title: 'SOUTHBLUE',
             description: 'Мужской Серый Рубашка',
-            price: '1 599,00 RUB'
+            price: '1 599,00 RUB',
+            status: true
         },
         {
             photo: photo2,
             title: 'XSIDE',
             description: 'Куртка мужская с воротником-стойкой',
-            price: '3 999,00 RUB'
+            price: '3 999,00 RUB',
+            status: true
         },
         {
             photo: photo3,
             title: 'SOUTHBLUE',
             description: 'Женское платье с круглым вырезом и короткими рукавами',
-            price: '1 399,00 RUB'
+            price: '1 399,00 RUB',
+            status: true
         },
         {
             photo: photo4,
             title: 'LCW DREAM',
             description: 'Женщина  Бежевый Носки до щиколотки',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         },
         {
             photo: photo1,
             title: 'SOUTHBLUE',
             description: 'Мужской Серый Рубашка',
-            price: '1 599,00 RUB'
+            price: '1 599,00 RUB',
+            status: true
         },
         {
             photo: photo2,
             title: 'XSIDE',
             description: 'Куртка мужская с воротником-стойкой',
-            price: '3 999,00 RUB'
+            price: '3 999,00 RUB',
+            status: true
         },
         {
             photo: photo3,
             title: 'SOUTHBLUE',
             description: 'Женское платье с круглым вырезом и короткими рукавами',
-            price: '1 399,00 RUB'
+            price: '1 399,00 RUB',
+            status: true
         },
         {
             photo: photo4,
             title: 'LCW DREAM',
             description: 'Женщина  Бежевый Носки до щиколотки',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         }
     ]
     return <Product data={saleData} cardData={cardData} />

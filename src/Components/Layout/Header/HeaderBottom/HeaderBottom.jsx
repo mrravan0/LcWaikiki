@@ -61,17 +61,26 @@ const HeaderBottom = () => {
                                 </Link>
                             </div>
                             <div className="header__baskets">
-                                <Link to={'/login'}><ProfileIcon /></Link>
-                                <Link>
-                                    <HartIcon
-                                        features={
-                                            {
-                                                color: '#fff',
-                                                stroke: 'rgb(25, 61, 176)'
-                                            }
-                                        } />
+                                <div className="header__profile">
+                                    <Link to={'/login'}><ProfileIcon styles={'header__profile-icon'} /></Link>
+                                    <div className="header__profile-content">
+                                        <p className="header__profile-title">
+                                            Зарегистрируйтесь, чтобы получить персональные предложения на покупки
+                                        </p>
+                                        <Link
+                                            className="header__profile-link"
+                                            to={'/login'}
+                                            style={{ backgroundColor: '#1f49b6' }}>Войти</Link>
+                                        <Link
+                                            className="header__profile-link"
+                                            to={'/register'}
+                                            style={{ backgroundColor: '#4e8bfd' }}>Создать личный кабинет</Link>
+                                    </div>
+                                </div>
+                                <Link to={'/whishList'}>
+                                    <HartIcon features={{ color: 'rgb(25, 61, 176)' }} />
                                 </Link>
-                                <Link><CartIcon /></Link>
+                                <Link to={'/cart'}><CartIcon /></Link>
                             </div>
                         </div>
                         <div className="header__group">

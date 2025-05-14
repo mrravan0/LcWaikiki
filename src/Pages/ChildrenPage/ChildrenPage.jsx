@@ -13,73 +13,85 @@ const ChildrenPage = () => {
             photo: photo1,
             title: 'LCW Kids',
             description: 'Мальчики Зелёный Рубашка',
-            price: '999,00 RUB'
+            price: '999,00 RUB',
+            status: true
         },
         {
             photo: photo2,
             title: 'LCW LCW Kids',
             description: 'Девочки Черный Майка',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         },
         {
             photo: photo3,
             title: 'LCW Kids',
             description: 'Мальчики Зелёный Рубашка',
-            price: '1 199,00 RUB'
+            price: '1 199,00 RUB',
+            status: true
         },
         {
             photo: photo4,
             title: 'LCW Kids Classic',
             description: 'Футболка с круглым вырезом и принтом банта для девочек',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         },
         {
             photo: photo1,
             title: 'LCW Kids',
             description: 'Мальчики Зелёный Рубашка',
-            price: '999,00 RUB'
+            price: '999,00 RUB',
+            status: true
         },
         {
             photo: photo2,
             title: 'LCW LCW Kids',
             description: 'Девочки Черный Майка',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         },
         {
             photo: photo3,
             title: 'LCW Kids',
             description: 'Мальчики Зелёный Рубашка',
-            price: '1 199,00 RUB'
+            price: '1 199,00 RUB',
+            status: true
         },
         {
             photo: photo4,
             title: 'LCW Kids Classic',
             description: 'Футболка с круглым вырезом и принтом банта для девочек',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         },
         {
             photo: photo1,
             title: 'LCW Kids',
             description: 'Мальчики Зелёный Рубашка',
-            price: '999,00 RUB'
+            price: '999,00 RUB',
+            status: true
         },
         {
             photo: photo2,
             title: 'LCW LCW Kids',
             description: 'Девочки Черный Майка',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         },
         {
             photo: photo3,
             title: 'LCW Kids',
             description: 'Мальчики Зелёный Рубашка',
-            price: '1 199,00 RUB'
+            price: '1 199,00 RUB',
+            status: true
         },
         {
             photo: photo4,
             title: 'LCW Kids Classic',
             description: 'Футболка с круглым вырезом и принтом банта для девочек',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         }
     ]
     return <Product data ={childrenData} cardData={cardData}/>

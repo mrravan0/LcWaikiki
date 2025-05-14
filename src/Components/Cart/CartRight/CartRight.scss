@@ -1,0 +1,65 @@
+@use '../../../Scss-Sass/Helpers/' as *;
+
+.cart {
+    &__right {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(30);
+        width: 35%;
+        padding: rem(30) rem(20);
+        background-color: #f8f8f8;
+        border-radius: rem(10);
+
+        @include respond('max', $tablet) {
+            width: 100%;
+        }
+
+        &-top {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(5);
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                bottom: rem(-15);
+                left: 0;
+                height: rem(1);
+                background-color: #c6c6c6;
+            }
+        }
+
+        &-title {
+            margin-bottom: rem(10);
+            font-weight: 700;
+            font-size: rem(23);
+            color: var(--color-grey);
+        }
+
+        &-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-bottom {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(15);
+        }
+
+        &-link {
+            display: inline-block;
+            background-color: #193db0;
+            color: var(--color-light);
+            padding: rem(10) rem(5);
+            width: 100%;
+            border-radius: rem(5);
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+
+}

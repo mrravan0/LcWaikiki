@@ -13,73 +13,85 @@ const LcwHomePage = () => {
             photo: photo1,
             title: 'LCW ACCESSORIES',
             description: 'Разноцветный Бутылка для воды',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         },
         {
             photo: photo2,
             title: 'LCW HOME',
             description: 'Декоративный Искусственный Цветок, 35 См',
-            price: '899,00 RUB'
+            price: '899,00 RUB',
+            status: true
         },
         {
             photo: photo3,
             title: 'LCW ACCESSORIES',
             description: 'Женщина  Серый Тапочки для ванной',
-            price: '999,00 RUB'
+            price: '999,00 RUB',
+            status: true
         },
         {
             photo: photo4,
             title: 'LCW HOME',
             description: 'Разноцветный Раскраска',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         },
         {
             photo: photo1,
             title: 'LCW ACCESSORIES',
             description: 'Разноцветный Бутылка для воды',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         },
         {
             photo: photo2,
             title: 'LCW HOME',
             description: 'Декоративный Искусственный Цветок, 35 См',
-            price: '899,00 RUB'
+            price: '899,00 RUB',
+            status: true
         },
         {
             photo: photo3,
             title: 'LCW ACCESSORIES',
             description: 'Женщина  Серый Тапочки для ванной',
-            price: '999,00 RUB'
+            price: '999,00 RUB',
+            status: true
         },
         {
             photo: photo4,
             title: 'LCW HOME',
             description: 'Разноцветный Раскраска',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         },
         {
             photo: photo1,
             title: 'LCW ACCESSORIES',
             description: 'Разноцветный Бутылка для воды',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         },
         {
             photo: photo2,
             title: 'LCW HOME',
             description: 'Декоративный Искусственный Цветок, 35 См',
-            price: '899,00 RUB'
+            price: '899,00 RUB',
+            status: true
         },
         {
             photo: photo3,
             title: 'LCW ACCESSORIES',
             description: 'Женщина  Серый Тапочки для ванной',
-            price: '999,00 RUB'
+            price: '999,00 RUB',
+            status: true
         },
         {
             photo: photo4,
             title: 'LCW HOME',
             description: 'Разноцветный Раскраска',
-            price: '599,00 RUB'
+            price: '599,00 RUB',
+            status: true
         }
     ]
     return <Product data={lcwHomeData} cardData={cardData} />
