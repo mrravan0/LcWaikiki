@@ -18,7 +18,7 @@
         row-gap: rem(15);
         width: 65%;
 
-        @include respond('max',$tablet){
+        @include respond('max', $tablet) {
             width: 100%;
         }
 
@@ -50,6 +50,7 @@
         }
 
         &-wrapper {
+            align-items: flex-start;
             justify-content: space-between;
             height: rem(135);
         }
@@ -62,19 +63,43 @@
         &-title,
         &-size {
             color: var(--color-grey);
+        }
 
+        &-size,
+        &-color {
+            @include respond('max', $mobile-s) {
+                font-size: rem(15);
+            }
         }
 
         &-subtitle {
             color: #bfbfbf;
+
+            @include respond('max', $mobile-s) {
+                font-size: rem(13);
+            }
         }
 
+        &-counter,
         &-middle {
             display: flex;
-            align-self: center;
             column-gap: rem(10);
             border: rem(1) solid #c8c8c8;
             border-radius: rem(3);
+        }
+
+        &-middle {
+            align-self: center;
+
+            @include respond('max', $mobile-s) {
+                display: none;
+            }
+        }
+
+        &-counter {
+            @include respond('min', $mobile-s) {
+                display: none;
+            }
         }
 
         &-button {
@@ -85,12 +110,21 @@
         &-right {
             row-gap: rem(15);
             align-items: flex-end;
+
+            @include respond('max', $mobile-s) {
+                height: rem(135);
+                justify-content: space-between;
+            }
         }
 
         &-price {
             color: #193db0;
             font-size: rem(25);
             font-weight: 700;
+
+            @include respond('max', $mobile-s) {
+                font-size: rem(16);
+            }
         }
 
         &-info {
@@ -107,6 +141,41 @@
             border: rem(1) solid #c8c8c8;
             border-radius: rem(3);
             cursor: pointer;
+        }
+    }
+
+    &__discount {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: rem(5);
+
+        @include respond('min', $mobile-s) {
+            display: none;
+        }
+
+        &-input,
+        &-button {
+            padding-block: rem(3);
+            border: rem(1) solid #9f9f9f;
+            border-radius: rem(3);
+            padding-inline: rem(10) rem(2);
+            font-size: rem(16);
+        }
+
+        &-input {
+            width: 60%;
+
+            &::placeholder {
+                color: #9f9f9f;
+            }
+        }
+
+        &-button {
+            width: 40%;
+            font-weight: 700;
+            text-align: center;
+            color: #9f9f9f;
         }
     }
 }

@@ -129,7 +129,7 @@
         order: 3;
 
         @include respond('max', $tablet) {
-            column-gap: rem(20);
+            column-gap: rem(15);
         }
     }
 

@@ -3,7 +3,7 @@ import RefreshIcon from '../../Assets/Svg/Form/RefreshIcon';
 import photo1 from '../../Assets/Images/Form/photo1.png';
 import './Form.scss';
 import { Fragment } from 'react';
-const Form = ({ data }) => {
+const Form = ({ data, status }) => {
     return (
         <section className="form">
             <div className="form__wrapper">
@@ -12,9 +12,9 @@ const Form = ({ data }) => {
                         <h1 className="form__content-title">{data.title}</h1>
                         {
                             data.input?.map((item, index) => (
-                                <div className="form__input" key={index} tabIndex={index}>
-                                    <input className='input' type={item.type} placeholder={item.description} />
-                                    <div className="form__input-image">
+                                <div className="form__box" key={index} tabIndex={index}>
+                                    <input className='form__box-input' type={item.type} placeholder={item.description} style={{ width: '100%' }} />
+                                    <div className="form__box-image">
                                         {item.photo}
                                     </div>
                                 </div>
@@ -32,7 +32,7 @@ const Form = ({ data }) => {
                             {data.status && <p className="form__checkbox-title">Я забыл мой пароль</p>}
                         </div>
                         {
-                            !data.status &&
+                            status &&
                             <div className="form__text">
                                 <div className="form__text-box">
                                     <img src={photo1} alt="" />
@@ -43,7 +43,7 @@ const Form = ({ data }) => {
                                 <textarea className='form__textarea'></textarea>
                             </div>
                         }
-                        <Link className="form__button">Войти</Link>
+                        <Link className="form__button" to={data.to}>{data.link || 'Войти'}</Link>
                     </form>
                     <div className="form__bottom" style={data.status ? { flexDirection: 'column' } : { flexDirection: ' row' }}>
                         {
@@ -55,7 +55,7 @@ const Form = ({ data }) => {
                                 :
                                 <Fragment>
                                     <p className="form__title">Уже зарегистрированы?</p>
-                                    <Link className="form__bottom-title" to={'/login'}>Войти</Link>
+                                    <Link className="form__bottom-title" to={'/login'}> Войти</Link>
                                 </Fragment>
                         }
                     </div>

@@ -15,9 +15,11 @@ const RegisterPage = () => {
             { info: 'Я хочу получать новости и  уведомления об акциях по электронной почте.' },
             { info: 'Настоящим я подтверждаю, что прочитал(а), понимаю и принимаю Политику защиты и обработки персональных данных ООО «Тема Ритейл Ру» и согласен(а) со всеми их положениями без каких-либо исключений.' }
         ],
+        to: '/register',
+        link: 'Создать личный кабинет',
         status: false
     }
-    return <Form data={registerData} />
+    return <Form data={registerData} status={true} />
 }
 
 export default RegisterPage;

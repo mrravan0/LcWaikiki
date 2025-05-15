@@ -14,6 +14,8 @@ import LoginPage from "../Pages/LoginPage/LoginPage";
 import RegisterPage from "../Pages/RegisterPage/RegisterPage";
 import WhishListPage from "../Pages/WhishListPage/WhishListPage";
 import CartPage from "../Pages/CartPage/CartPage";
+import OrderPage from "../Pages/OrderPage/OrderPage";
+import Bag from "../Components/Bag/Bag";
 function App() {
   return (
     <Fragment>
@@ -32,6 +34,8 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/whishList" element={<WhishListPage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/order" element={<OrderPage />} />
+          <Route path="/bag" element={<Bag />} />
         </Routes>
       </main>
       <Footer />

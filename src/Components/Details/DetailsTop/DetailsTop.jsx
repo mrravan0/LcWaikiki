@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import photo1 from '../../../Assets/Images/Details/photo1.png';
 import HartIcon from '../../../Assets/Svg/HartIcon';
 import './DetailsTop.scss';
@@ -40,9 +39,9 @@ const DetailsTop = ({ data }) => {
                     <div className="details__box">S</div>
                     <div className="details__box">XS</div>
                 </div>
-                <Link className="details__size-link">
+                <button className="details__size-link">
                     ДОБАВИТЬ В КОРЗИНУ
-                </Link>
+                </button>
             </div>
         </div>
     )

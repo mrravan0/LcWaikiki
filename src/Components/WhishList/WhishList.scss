@@ -14,18 +14,19 @@
         row-gap: rem(15);
     }
 
-    &__top {
+    &__content {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        column-gap: 1rem;
-    }
+        column-gap: rem(5);
 
-    &__left,
-    &__right {
-        display: flex;
-        flex-direction: column;
-        row-gap: rem(20);
+        @include respond('max', $tablet) {
+            .product__box-item {
+                &:nth-child(2n + 1) {
+                    display: none !important;
+                }
+            }
+        }
     }
 
     &__left {
@@ -93,6 +94,7 @@
 
         .card {
             transition-duration: var(--transition-duration);
+
             @include hover {
                 box-shadow: 0 0 rem(30) 0 rgba(0, 0, 0, .2);
             }

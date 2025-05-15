@@ -8,6 +8,10 @@
     &__inner {
         width: 100%;
         padding-inline: rem(30);
+
+        @include respond('max', $tablet) {
+            padding-inline: rem(15);
+        }
     }
 
     &__top {

@@ -1,0 +1,24 @@
+@use '../../Scss-Sass/Helpers/' as *;
+
+.order {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .form {
+        width: 50%;
+        position: relative;
+
+        &:first-child {
+            border-right: rem(1) solid #cbcbcb;
+        }
+
+        &:last-child {
+            .form__bottom {
+                display: none;
+            }
+        }
+    }
+}

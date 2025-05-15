@@ -9,6 +9,7 @@ const LoginPage = () => {
             { description: 'Ваш пароль', photo: <PasswordIcon />, type: 'password' }
         ],
         checkbox: [{ info: 'Запомнить меня' }],
+        to: '/login',
         status: true
     }
     return <Form data={formData} />

@@ -50,7 +50,7 @@ const DetailsPage = () => {
     return (
         <Fragment>
             <Details />
-            <CardSlider data={detailsData} />
+            <CardSlider data={detailsData} title={'Аналогичный продукт'} />
         </Fragment>
     )
 }

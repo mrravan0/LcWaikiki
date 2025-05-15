@@ -160,6 +160,7 @@
             background-color: #193db0;
             color: var(--color-light);
             border-radius: rem(5);
+            cursor: pointer;
 
             @include respond('max', $tablet) {
                 display: none;

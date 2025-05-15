@@ -14,7 +14,7 @@ const Card = memo(({ data, status = true }) => {
     return (
         <div className="card">
             <div className="card__wrapper">
-                <div className="card__top" onClick={status && handleClick}>
+                <div className="card__top" onClick={status ? handleClick : undefined}>
                     <img className='card__image' src={data.photo} alt="" />
                     <div className="card__content">
                         {data.status && <h1 className="card__title">{data.title}</h1>}

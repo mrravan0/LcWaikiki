@@ -1,0 +1,109 @@
+@use '../../../Scss-Sass/Helpers/' as *;
+
+.cart {
+    &__bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 20;
+        padding-inline: rem(15);
+        padding-top: rem(15);
+        width: 100%;
+        background-color: rgb(250, 250, 250);
+
+        &-wrapper,
+        &-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-content {
+            row-gap: rem(5);
+        }
+
+        &-first,
+        &-second {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: rem(5);
+        }
+
+        &-title {
+            color: #1f49b6;
+            font-weight: 700;
+        }
+
+        &-burger {
+            width: rem(30);
+            height: rem(20);
+            position: relative;
+
+
+            &::after,
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: #193db0;
+                height: rem(3);
+                border-radius: rem(5);
+            }
+
+            &::after {
+                width: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            &::before {
+                width: 50%;
+                top: 50%;
+                left: 50%;
+                translate: -50% -50%;
+            }
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(5);
+        }
+
+        &-item {
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            font-size: rem(14);
+            color: #707070;
+        }
+
+        &-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 rem(-3) rem(15) 0 rgba(0, 0, 0, .1);
+            margin-inline: rem(-15);
+            padding: rem(15);
+        }
+
+        &-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #193db0;
+            color: var(--color-light);
+            font-weight: 700;
+            text-align: center;
+            padding: rem(15) rem(5);
+            width: 100%;
+            border-radius: rem(5);
+        }
+
+        &-description {
+            padding-top: rem(10);
+            border-top: rem(1) solid #cdcdcd;
+            font-size: rem(14);
+            color: #414141;
+        }
+    }
+}
