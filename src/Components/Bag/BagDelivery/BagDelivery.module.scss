@@ -1,0 +1,103 @@
+@use '../../../Scss-Sass/Helpers/' as *;
+
+.bag {
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(50);
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(20);
+            color: #adadad;
+        }
+
+        &-group {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: rem(20) rem(10);
+
+            @include respond('max', $tablet) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        &-button {
+            max-width: rem(200);
+            width: 100%;
+            align-self: center;
+            color: var(--color-light);
+            background-color: #193DB0;
+            font-weight: 600;
+            font-size: rem(18);
+            padding: rem(10) rem(5);
+            text-align: center;
+        }
+
+        &-example {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-align: end;
+        }
+
+        &-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            padding: rem(5);
+            border: rem(1) solid #adadad;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 30%;
+                width: rem(2);
+                height: 100%;
+                background-color: #adadad;
+            }
+        }
+
+        &-number {
+            display: flex;
+            align-items: center;
+            width: 30%;
+            column-gap: rem(10);
+        }
+
+        &-phone {
+            width: 70%;
+            padding-left: rem(30);
+        }
+    }
+
+    &__region,
+    &__address {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: rem(5);
+        padding: rem(5);
+        border: rem(1) solid #adadad;
+        font-size: rem(16);
+
+
+        input {
+            width: 100%;
+        }
+
+        &-content {
+            display: flex;
+            align-items: center;
+            column-gap: rem(10);
+            width: 100%;
+        }
+    }
+
+    &__address {
+        max-width: rem(400);
+        width: 100%;
+        align-self: center;
+    }
+}

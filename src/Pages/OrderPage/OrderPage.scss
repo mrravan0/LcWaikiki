@@ -5,14 +5,19 @@
         display: flex;
         justify-content: space-between;
 
+        @include respond('max', $mobile) {
+            flex-direction: column;
+        }
     }
 
     .form {
-        width: 50%;
-        position: relative;
+        @include respond('min', $mobile) {
+            width: 50%;
+            position: relative;
 
-        &:first-child {
-            border-right: rem(1) solid #cbcbcb;
+            &:first-child {
+                border-right: rem(1) solid #cbcbcb;
+            }
         }
 
         &:last-child {

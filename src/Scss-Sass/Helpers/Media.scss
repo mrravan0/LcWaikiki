@@ -1,8 +1,8 @@
 $laptop-lg: 1440px;
 $laptop: 1250px;
 $tablet: 1000px;
-$mobile: 790px;
-$mobile-s: 550px;
+$mobile: 850px;
+$mobile-s: 560px;
 
 @mixin respond($query, $value) {
     @if $query =='min' {

@@ -1,6 +1,6 @@
 import { memo } from 'react';
 import HeaderBottom from './HeaderBottom/HeaderBottom';
-import DeliveryIcon from '../../../Assets/Svg/DeliveryIcon';
+import truck1 from '../../../Assets/Images/Header/truck1.png';
 import './Header.scss';
 const Header = memo(() => {
     return (
@@ -8,7 +8,7 @@ const Header = memo(() => {
             <section className='header__top'>
                 <div className="header__inner">
                     <div className="header__top-inner">
-                        <DeliveryIcon />
+                        <img src={truck1} alt="" style={{width: '25px'}} />
                         <p className="header__top-title">
                             Статус заказа
                         </p>

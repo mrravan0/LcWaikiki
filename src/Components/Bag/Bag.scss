@@ -1,10 +1,31 @@
 @use '../../Scss-Sass/Helpers/' as *;
 
 .bag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    background-color: var(--color-light);
+    width: 100%;
+    padding-block: rem(50);
+
     &__wrapper {
         display: flex;
-        align-items: flex-start;
-        column-gap: rem(30);
+        flex-direction: column;
+        align-items: center;
+        row-gap: rem(5);
+
+        &-inner {
+            display: flex;
+            align-items: flex-start;
+            column-gap: rem(30);
+            width: 100%;
+
+            @include respond('max', $tablet) {
+                flex-direction: column-reverse;
+                row-gap: rem(10);
+            }
+        }
     }
 
     &__group,
@@ -16,7 +37,17 @@
 
     &__group {
         row-gap: rem(30);
-        width: 100%;
+        width: 75%;
+
+        @include respond('max', $tablet) {
+            width: 100%;
+        }
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(5);
+        }
     }
 
     &__top {
@@ -24,12 +55,16 @@
         row-gap: rem(5);
     }
 
-    &__title{
+    &__title {
         padding: rem(10);
+        color: #676767;
+        font-weight: 600;
+        background-color: #ebeef3;
     }
 
     &__content {
         width: 100%;
+
         &-top {
             display: flex;
             align-items: center;
@@ -43,10 +78,60 @@
             color: #003087;
             font-size: rem(18);
             padding: rem(10);
+            background-color: #fafafa;
+            opacity: 0.5;
+            cursor: pointer;
+
+            @include respond('max', $laptop) {
+                height: rem(120);
+            }
         }
-        
-        &-image{
+
+        &-image {
             width: rem(35);
         }
+    }
+
+    &__right {
+        width: 25%;
+
+        @include respond('max', $tablet) {
+            width: 100%;
+        }
+
+        &-top {
+            padding: rem(10);
+            background-color: #ebeef3;
+            color: #676767;
+            font-weight: 600;
+            border-bottom: rem(1) solid #e3e6ec;
+        }
+
+        &-bottom {
+            background-color: #f5f6f9;
+            padding: rem(14);
+        }
+    }
+
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(10);
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: rem(3);
+        font-size: rem(15);
+        color: #555;
+    }
+
+    .is-clicked {
+        background-color: #E8E8E8;
+        border-bottom: rem(2) solid #003087;
+        opacity: 1;
     }
 }

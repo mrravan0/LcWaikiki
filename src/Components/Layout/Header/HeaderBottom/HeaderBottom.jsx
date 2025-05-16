@@ -1,10 +1,10 @@
+import { Link } from 'react-router-dom';
 import LogoIcon from '../../../../Assets/Svg/LogoIcon';
 import HeaderNavigation from '../HeaderNavigation/HeaderNavigation';
 import ProfileIcon from '../../../../Assets/Svg/ProfileIcon';
 import HartIcon from '../../../../Assets/Svg/HartIcon';
 import CartIcon from '../../../../Assets/Svg/CartIcon';
 import SearchIcon from '../../../../Assets/Svg/SearchIcon';
-import { Link } from 'react-router-dom';
 import photo1 from '../../../../Assets/Images/Header/photo1.png';
 import photo2 from '../../../../Assets/Images/Header/photo2.png';
 import photo3 from '../../../../Assets/Images/Header/photo3.png';
