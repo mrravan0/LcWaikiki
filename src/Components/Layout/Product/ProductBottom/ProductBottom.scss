@@ -1,0 +1,102 @@
+@use '../../../../Scss-Sass/Helpers/' as *;
+
+.product {
+    &__bottom {
+        display: flex;
+        column-gap: rem(20);
+        padding-inline: rem(20);
+
+        @include respond('max', $tablet) {
+            padding-inline: rem(12);
+        }
+
+        &-group {
+            display: flex;
+            align-items: flex-start;
+            column-gap: rem(10);
+            white-space: nowrap;
+            width: max-content;
+            position: absolute;
+            right: rem(20);
+            z-index: 10;
+            cursor: pointer;
+
+            @include respond('max', $tablet) {
+                display: none;
+            }
+        }
+
+        &-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+
+            @include respond('max', $tablet) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        &-details {
+            display: flex;
+            flex-direction: column;
+            max-width: rem(170);
+            width: 100%;
+            border: rem(1) solid var(--color-grey);
+            border-radius: rem(5);
+            padding: rem(5) rem(15);
+            background-color: var(--color-light);
+        }
+
+        &-summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 1rem;
+        }
+
+        &-button {
+            max-width: rem(200);
+            width: 100%;
+            align-self: center;
+            background-color: #193db0;
+            color: var(--color-light);
+            font-size: rem(16);
+            font-weight: 600;
+            padding: rem(10);
+            border-radius: rem(100);
+            text-align: center;
+            margin-top: rem(20);
+        }
+    }
+
+    &__box {
+        display: flex;
+        align-items: center;
+        column-gap: rem(20);
+        margin-top: rem(5);
+
+        &-content {
+            display: flex;
+            align-items: center;
+            column-gap: rem(5);
+            position: relative;
+
+            &:first-child {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    background-color: #878787;
+                    width: rem(2);
+                    height: 100%;
+                    top: 0;
+                    right: rem(-12);
+                }
+            }
+        }
+
+        &-item {
+            width: rem(10);
+            height: rem(20);
+        }
+    }
+}
